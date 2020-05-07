@@ -13,6 +13,7 @@ for column in columns:
 	column_name = column.get_Parameter(BuiltInParameter.ALL_MODEL_FAMILY_NAME).AsString()
 	if column_name == 'CircleColumn':
 		column_type = column
+		column_type.Activate()
 
 
 t = Transaction(doc, 'column')
