@@ -42,9 +42,9 @@ for s in schedules:
         break
 
 for v in views:
-	name_v = v.get_Parameter(BuiltInParameter.VIEW_NAME).AsString()
-	if name_v == view_name:
-		view_l = v
+    name_v = v.get_Parameter(BuiltInParameter.VIEW_NAME).AsString()
+    if name_v == view_name:
+        view_l = v
         break
 
 t = Transaction(doc,'3d reinforcement')
