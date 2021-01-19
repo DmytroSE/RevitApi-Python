@@ -20,6 +20,7 @@ class NonModalWindow(forms.WPFWindow):
 
     def update_ui(self):
         if revit.doc:
+            #type the code here to update the user interface
             print('ok')
 
     def window_moving(self, sender, args):
