@@ -1,0 +1,34 @@
+# pylint: skip-file
+from pyrevit import HOST_APP, framework, EXEC_PARAMS
+from pyrevit import forms
+from pyrevit import revit, DB, UI
+from pyrevit.runtime import types as runtime_types
+from pyrevit.framework import Input
+from pyrevit import script
+__persistentengine__ = True
+
+class NonModalWindow(forms.WPFWindow):
+    def __init__(self):
+        pass
+
+    def setup(self):
+        self.update_ui()
+
+    @revit.events.handle('doc-changed', 'doc-closed', 'doc-opened', 'view-activated')
+    def uiupdator_eventhandler(sender, args):
+        ui.update_ui()
+
+    def update_ui(self):
+        if revit.doc:
+            print('ok')
+
+    def window_moving(self, sender, args):
+        if args.ChangedButton == Input.MouseButton.Left:
+            self.DragMove()
+
+    def window_closing(self, sender, args): #pylint: disable=unused-argument
+        revit.events.stop_events()
+
+ui = script.load_ui(NonModalWindow(), ui_file='sensors.xaml')
+
+ui.show(modal=__shiftclick__)
