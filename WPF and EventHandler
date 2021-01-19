@@ -1,8 +1,6 @@
 # pylint: skip-file
-from pyrevit import HOST_APP, framework, EXEC_PARAMS
 from pyrevit import forms
 from pyrevit import revit, DB, UI
-from pyrevit.runtime import types as runtime_types
 from pyrevit.framework import Input
 from pyrevit import script
 __persistentengine__ = True
