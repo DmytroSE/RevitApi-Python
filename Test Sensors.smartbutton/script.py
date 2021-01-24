@@ -1,12 +1,9 @@
 # pylint: skip-file
-#from pyrevit import HOST_APP, framework, EXEC_PARAMS
 from pyrevit import forms
-#from pyrevit.runtime import types as runtime_types
 from pyrevit.framework import Input
 from pyrevit import framework
 from pyrevit import script, revit
 from pyrevit import DB, UI
-from pyrevit import script
 from pyrevit import HOST_APP, EXEC_PARAMS
 
 from Autodesk.Revit.UI import TaskDialog
