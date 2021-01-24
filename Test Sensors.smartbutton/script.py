@@ -38,7 +38,7 @@ def open_script_2(sender, args):
     try:
         location = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
         file = os.path.realpath(os.path.join(location + '/interface.xaml'))
-        ui = Form(file)
+        ui = NonModalWindow(file)
     except Exception,e: TaskDialog.Show('1', str(e))
 
 def __selfinit__(script_cmp, ui_button_cmp, __rvt__):
