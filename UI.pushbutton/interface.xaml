@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="Window1"
+	Height="300"
+	Width="300">
+	<Grid>
+		<Button
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Bottom"
+			Margin="8,0,0,26"
+			Width="75"
+			Height="23"
+			x:Name="ok_button"
+			Click="ok_button_push"
+			Content="Ok" />
+		<Button
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Bottom"
+			Margin="110,0,0,26"
+			Width="75"
+			Height="23"
+			x:Name="select_button"
+			Click="select_push_button"
+			Content="Select" />
+		<Button
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Bottom"
+			Margin="0,0,8,26"
+			Width="75"
+			Height="23"
+			Click="cancel_button"
+			x:Name="cancel_button"
+			Content="Cancel" />
+		<Label
+			Content="parameter name"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="24,71,0,0"
+			Width="103"
+			Height="30" />
+		<TextBox
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Top"
+			Margin="0,74,24,0"
+			Width="120"
+			Height="20"
+			x:Name="text_input" />
+		<Label
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="24,101,0,0"
+			Width="103"
+			Height="30"
+			Content="value" />
+		<TextBox
+			d1p1:Name="value_input" xmlns:d1p1="http://schemas.microsoft.com/winfx/2006/xaml"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Top"
+			Margin="0,104,24,0"
+			Width="120"
+			Height="20" />
+	</Grid>
+</Window>
