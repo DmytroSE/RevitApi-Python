@@ -65,7 +65,7 @@ for i in els:
 t.Commit()
 
 # Num_3 ------------------------------ Single Category Selection
-sel = uidoc.Selection.PickObjects(Selection.ObjectType.Element,  Single_Selection('Structural Columns'))
+sel = uidoc.Selection.PickObjects(Selection.ObjectType.Element,  Single_Category('Structural Columns'))
 els = [doc.GetElement( elId ) for elId in sel]
 t = Transaction(doc, 'selection')
 t.Start()
